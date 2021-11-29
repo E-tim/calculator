@@ -1,0 +1,101 @@
+<html>
+<head>
+    <title>bob + man </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/a17111d927.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+</head>
+<body>
+    <div class="main">
+        <table>
+            <tr>
+                <input type="text" name="" id="input">
+            </tr>
+            <tr>
+                <td colspan="2"><button onclick="clearResult()" class="shift">c</button></td>
+                <td><button onclick="deleteChar()"><i class="fas fa-backspace"></i></button></td>
+                <td><button onclick="number('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="number(7)">7</button></td> <!--I made changes here to cimfirm if it will work and it did-->
+                <td><button onclick="number('8')">8</button></td>
+                <td><button onclick="number('9')">9</button></td>
+                <td><button onclick="number('*')">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="number('4')">4</button></td>
+                <td><button onclick="number('5')">5</button></td>
+                <td><button onclick="number('6')">6</button></td>
+                <td><button onclick="number('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="number('1')">1</button></td>
+                <td><button onclick="number(2)">2</button></td> <!--I made changes here to cimfirm if it will work and it did-->
+                <td><button onclick="number('3')">3</button></td>
+                <td><button onclick="number('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="number('0')">0</button></td>
+                <td><button onclick="number('.')">.</button></td>
+                <td><button onclick="result()">=</button></td>
+                <td><button onclick="number('%')">%</button></td>
+            </tr>
+        </table>
+    </div><br><br>
+            <ul>
+                <li id="myLi"></li>
+            </ul>
+    <script>
+        // get number 
+        function number(num) {
+            var result = document.getElementById("input");
+            result.value += num;
+        }
+
+        // get result 
+        function result() {
+            var result = document.getElementById("input");
+            result.value = eval(result.value);
+        }
+        function clearResult() {
+            var result = document.getElementById("input");
+            result.value = "";
+        }
+
+        function deleteChar() {
+            var number = document.getElementById("input");
+            var remove = number.value;
+            remove = remove.slice(0,-1); // remove last character from the list  
+            number.value = remove;
+        }
+// Calculating from celsius to fahrenheit
+        // function toCelsius(f) {
+        //     return (f-32) * (5/6)
+        // };
+
+        // const myTemp = toCelsius(100)
+        // console.log(myTemp);
+
+        let li = document.getElementById('myLi')
+
+        let mint = Number(prompt('wite the figure here'));
+        let mints = Number(prompt('wite the figure here'));
+
+        function myFuction(l, b){
+            return (l + b) - 1;
+        }
+
+        li.innerHTML = myFuction(mint, mints);
+
+        // function myFunc (y) {
+        //     return (y * y);
+        // }
+        // console.log(myFunc(20));
+
+        
+
+
+    </script>
+</body>
+</html>

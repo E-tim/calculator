@@ -1,0 +1,44 @@
+.main {
+    border: 2px solid grey;
+    width: 300px;
+    margin: 0px 10px;
+}
+table {
+    width: 100%;
+}
+td {
+    width: 25%;
+}
+button {
+    width: 270px;
+    background-color: black;
+    color: white;
+    height: 270px;
+    font-size: 90px;
+}
+.shift {
+    width: 540px;
+}
+input {
+    width: 1090px;
+    margin-left: 5px;
+    height: 400px;
+    background-color: gray;
+    color: white;
+    font-size: 90px;
+    font-weight: 700;
+}
+
+@media only screen and (max-width: 900px) {
+    .main {
+        border: 2px solid grey;
+        width: 550px;
+        margin: 0px auto;
+    }
+    table {
+    width: 90%;
+    }
+    td {
+    width: 50%;
+    }
+
